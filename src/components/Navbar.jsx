@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -30,7 +31,7 @@ export const Navbar = () => {
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-black backdrop-blur-3xl shadow-xl" : "py-5 bg-black  backdrop-blur-3xl shadow-xl"
+        isScrolled ? "py-3  backdrop-blur-3xl shadow-xl" : "py-5     backdrop-blur-3xl shadow-xl"
       )}
     >
       <div className="container flex items-center justify-between">
@@ -61,7 +62,7 @@ export const Navbar = () => {
 
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50 bg-black"
+          className="md:hidden p-2 text-foreground z-50 0 backdrop-blur-3xl"
           aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
@@ -69,26 +70,28 @@ export const Navbar = () => {
 
         <div
           className={cn(
-            "fixed inset-0 bg-black/70 backdroup-blur-md z-40 flex flex-col items-center justify-center",
+            "fixed inset-0 backdroup-blur-md z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
           )}
         >
-          <div className="flex flex-col space-y-8 text-xl bg-black p-10">
+          <div className="flex flex-col space-y-8 text-xl bg-[#0b111e]/80 p-10">
             {navItems.map((item, key) => (
               <a
                 key={key}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 bg-black"
+                className="text-foreground/80 hover:text-primary transition-colors duration-300 text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
           </div>
+          
         </div>
+        <ThemeToggle/>
       </div>
     </nav>
   );
