@@ -49,6 +49,38 @@ const certificate = [
     image: "/certificates/travelMania.jpg",
     preview: "/certificates/travelMania.jpg",
   },
+  {
+    id: 7,
+    title: "Sql (Basic)",
+    description:
+      "Awarded for successfully completing the SQL (Basic) skill assessment on HackerRank, demonstrating foundational proficiency in writing queries, filtering data, and working with SQL clauses such as SELECT, WHERE, JOIN, and GROUP BY.",
+    image: "/certificates/sql.png",
+    preview: "/certificates/sql.png",
+  },
+  {
+    id: 8,
+    title: "Azure Compute & Networking Services – Microsoft Learn",
+    description:
+      " Completed module covering Azure virtual machines, containers, and core networking resources.",
+    image: "/certificates/Dec_Azure.png",
+    preview: "/certificates/Dec_Azure.png",
+  },
+  {
+    id: 9,
+    title: "Core Architectural Components of Azure – Microsoft Learn ",
+    description:
+      "Completed module on key Azure architecture elements, including regions, availability zones, and resource groups.",
+    image: "/certificates/Dec_Arc_Aruze.png",
+    preview: "/certificates/Dec_Arc_Aruze.png",
+  },
+  {
+    id: 10,
+    title: "Introduction to Git – Microsoft Learn",
+    description:
+      "Completed beginner-level module covering Git fundamentals, version control principles, and essential commands like init, commit, and push.",
+      image: "/certificates/git.png",
+    preview: "/certificates/git.png",
+  },
 ];
 
 export const CertificateSection = () => {
@@ -59,7 +91,7 @@ export const CertificateSection = () => {
           <span className="text-primary">Certificates</span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
           {certificate.map((cert) => (
             <div
               key={cert.id}

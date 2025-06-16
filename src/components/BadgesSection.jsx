@@ -16,19 +16,11 @@ export default function BadgesSection() {
     <img
       className="p-8 rounded-t-lg"
       src="/Badges/javaBadges.png"
-      alt="product image"
+      alt="java image"
     />
   </a>
 </div>
-        <div className="w-md  h- md max-w-sm">
-  <a href="#">
-    <img
-      className="p-8 rounded-t-lg "
-      src="/Badges/leetcode.gif"
-      alt="product image"
-    />
-  </a>
-</div>
+      
 
      
 
@@ -37,13 +29,31 @@ export default function BadgesSection() {
     <img
       className="p-8 rounded-t-lg"
       src="/Badges/PythonB.png"
-      alt="product image"
+      alt="python image"
     />
   </a>
 </div>
+       <div className="w-full max-w-sm">
+  <a href="#">
+    <img
+      className="p-8 rounded-t-lg"
+      src="/Badges/sql_badges.png"
+      alt="sql image"
+    />
+  </a>
+</div>
+ 
        </div>
 
-
+ <div className="w-md  h-md ">
+  <a href="#">
+    <img
+      className="p-2 rounded-t-lg "
+      src="/Badges/leetcode.gif"
+      alt="leetcode image"
+    />
+  </a>
+</div>
       
       </div>
     </section>
